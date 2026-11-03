@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Step 1: Edit response.json
+nano ./cfg/tokens.json
+
+# Step 2: Create txnmgr file if not exists
+touch ./deploy/30_txnmgr.xml
+
+# Step 3: View logs
+less ./log/simulator.log

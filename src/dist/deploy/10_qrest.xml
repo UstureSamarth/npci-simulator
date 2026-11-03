@@ -1,0 +1,4 @@
+<qrest class='org.jpos.qrest.RestServer' logger='Q2'>
+    <property name='port' value="${SERVER_PORT}"/>
+    <property name='queue' value='TXNMGR'/>
+</qrest>

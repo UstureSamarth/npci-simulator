@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export SERVER_PORT=8899
+export TXNMGR_SESSION=2
+export TXNMGR_MAX_SESSION=3

@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'org.jpos.jposapp' version '0.0.17'
+    id 'org.sonarqube' version '7.2.2.6593'
+}
+
+group = 'com.sarvatra.sim'
+version = '1.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url = uri('https://jpos.org/maven') }
+    mavenLocal()
+}
+
+dependencies {
+    implementation libs.jpos
+    implementation libs.bundles.jposee
+    implementation libs.commons.lang3
+    implementation libs.xml.bind
+    implementation libs.glassifish
+    implementation libs.http.client
+    compileOnly libs.lombok
+    annotationProcessor libs.lombok
+}
+
+jpos {
+    distDir.set('src/dist')
+}
+
